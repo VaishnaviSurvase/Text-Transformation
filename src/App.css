@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+body{
+  background-image: url("https://www.fairobserver.com/wp-content/uploads/2022/12/ai.png");
+}
 
 .App-logo {
   height: 40vmin;
@@ -36,3 +39,8 @@
     transform: rotate(360deg);
   }
 }
+
+.text{
+  -webkit-text-stroke:2px black;
+  color: blue;
+  }

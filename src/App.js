@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {Uppercase} from './Conversion/Uppercase'
+import { Alert } from './Conversion/Alert';
+import  { useState } from 'react';
+
 
 function App() {
+
+const [alert , setAlert]= useState(null);
+  
+const func=(message , type)=>{
+  setAlert({
+    msg :message,
+    type:type,  
+  })
+}
+
+  setTimeout(()=>{
+    setAlert(null);
+  }, 5000)
+  
+    
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div>
+    <Alert mystr={alert} />
+    <Uppercase show={func} />
     </div>
   );
 }
